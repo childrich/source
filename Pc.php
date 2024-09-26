@@ -5,8 +5,6 @@
     |    Group : https://t.me/childrichgroup           |
     |__________________________________________________|
 */
-<?php
-
 class Pc
 {
     public $agent = NULL;
