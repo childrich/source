@@ -5,7 +5,6 @@
     |    Group : https://t.me/childrichgroup           |
     |__________________________________________________|
 */
-<?php
 ini_set('memory_limit', '2G');
 
 class RequestHandler {
