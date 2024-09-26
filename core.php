@@ -5,7 +5,6 @@
     |    Group : https://t.me/childrichgroup           |
     |__________________________________________________|
 */
-<?php
 use Jaybizzle\CrawlerDetect\CrawlerDetect;
 
 class core {
