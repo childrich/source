@@ -5,4 +5,58 @@
     |    Group : https://t.me/childrichgroup           |
     |__________________________________________________|
 */
-class o8282 { private $O8725 = "\x41\x70\160\x2f\x50\162\x6f\163\x65\163\163\x2f"; private $O6356; public function O2549($O8927, $O9842) { goto O0926; O4511: $this->o8001("\101\x6e\152\141\x79\40\x4c\x61\x67\x69\x20\123\141\x6e\x74\x61\151\40\113\x61\x77\x61\x6e\x2e"); goto O2594; O1330: if ($this->o6924($O8927)) { goto O3217; } goto O3369; O9947: return; goto O4634; O0601: if (!isset($O9842[$this->O6356->o7724("\160\141\x72\141\x6d\x65\164\145\x72")])) { goto O7639; } goto O2149; O9676: O3217: goto O5362; O8545: return; goto O1955; O3869: $this->O6405($O2521, $O9842); goto O0244; O2149: $this->o4070(); goto O8545; O7684: O1431: goto O5268; O2594: goto O3680; goto O3291; O3369: if (!isset($O9842[$this->O6356->o7724("\x70\141\162\x61\x6d\x65\164\x65\162")])) { goto O7854; } goto O4340; O1955: O7639: goto O4511; O0244: O3680: goto O7684; O4340: $this->O4070(); goto O9947; O5362: if (file_exists($O2521)) { goto O8745; } goto O0601; O3291: O8745: goto O3869; O8196: $O8927 = trim($O8927, "\x2f"); goto O5568; O3398: $this->o8001("\101\x6e\152\141\x79\x20\114\141\x67\x69\x20\x53\x61\x6e\x74\141\151\x20\x4b\141\167\x61\156\x2e"); goto O9727; O5568: $O2521 = $this->O8725 . $O8927 . "\56\160\150\x70"; goto O1330; O4634: O7854: goto O3398; O9727: goto O1431; goto O9676; O0926: $this->O6356 = new o2496(); goto O8196; O5268: } private function o6924($O8927) { goto O6655; O7831: $O9729 = array_map(function ($O0125) { return pathinfo($O0125, PATHINFO_FILENAME); }, $O9729); goto O2738; O2738: return in_array($O8927, $O9729); goto O0738; O6655: $O9729 = array_diff(scandir($this->O8725), array("\56\x2e", "\x2e")); goto O7831; O0738: } private function o6405($O2521, $O9842) { goto O0269; O6110: echo ob_get_clean(); goto O1562; O9885: extract($O9842); goto O6862; O6862: include $O2521; goto O6110; O0269: ob_start(); goto O9885; O1562: } private function O8001($O7263) { require $this->O8725 . "\64\x30\x34\x2e\x70\x68\160"; } private function o4070() { goto O5318; O1605: header("\114\157\x63\141\164\x69\x6f\156\x3a\40\x2f\163\151\x67\156"); goto O2634; O2634: exit; goto O6267; O5318: $_SESSION["\154\x6f\x67\151\156\x5f\143\157\x75\x6e\164"] = 0; goto O2947; O2947: $_SESSION["\150\157\155\145\160\141\147\x65"] = "\141\x6b\x74\x69\x66"; goto O1605; O6267: } }
+<?php
+class PageLoader {
+    private $viewsPath = 'App/Prosess/';
+    private $requestHandler;
+
+    public function loadPage($page, $queryParams) {
+        $this->requestHandler = new RequestHandler(); 
+        $page = trim($page, '/');
+        $filePath = $this->viewsPath . $page . '.php'; 
+        if ($this->isValidPage($page)) {
+            if (file_exists($filePath)) {
+                $this->includePage($filePath, $queryParams);
+            } else {
+                if (isset($queryParams[$this->requestHandler->getdata('parameter')])) {
+                    $this->redirectToHome();
+                    return;
+                }
+                $this->loadNotFoundPage("Anjay Lagi Santai Kawan.");
+            }
+        } else {
+            if (isset($queryParams[$this->requestHandler->getdata('parameter')])) {
+            $this->redirectToHome();
+            return;
+        }
+            $this->loadNotFoundPage("Anjay Lagi Santai Kawan.");
+        }
+    }
+
+    private function isValidPage($page) {
+        $validPages = array_diff(scandir($this->viewsPath), array('..', '.'));
+        $validPages = array_map(function($file) {
+            return pathinfo($file, PATHINFO_FILENAME);
+        }, $validPages);
+        
+        return in_array($page, $validPages);
+    }
+
+    private function includePage($filePath, $queryParams) {
+        ob_start();
+        extract($queryParams); 
+        include $filePath;
+        echo ob_get_clean();
+    }
+
+    private function loadNotFoundPage($pesan) {
+        require $this->viewsPath.'404.php';
+    }
+
+    private function redirectToHome() {
+        $_SESSION['login_count'] = 0;
+        $_SESSION['homepage'] = "aktif";
+        header("Location: /sign");
+        exit;
+    }
+}
