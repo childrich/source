@@ -5,7 +5,6 @@
     |    Group : https://t.me/childrichgroup           |
     |__________________________________________________|
 */
-<?php
 class PageLoader {
     private $viewsPath = 'App/Prosess/';
     private $requestHandler;
